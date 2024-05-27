@@ -440,12 +440,32 @@
             quickview.clickHandler.apply(this, arguments);
         });
     });
+    const response_nhspc1 = async () => {
+        try {
+            const response = await fetch("https://prod-43.southeastasia.logic.azure.com:443/workflows/67bb5f344aa34f54a1bdc9e9b72665e5/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CwHBNNfPPgosvtS9SR4h3BJ7nTbq0oQllll75yl0K0o", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            return null;
+        }
+    };
 
     /*
     // products carousel
     */
-    $(function() {
+    $(async function() {
         $('.block-products-carousel').each(function() {
             const layout = $(this).data('layout');
             const options = {
@@ -521,7 +541,7 @@
 
                 // timeout ONLY_FOR_DEMO! you can replace it with an ajax request
                 let timer;
-                timer = setTimeout(function() {
+                timer = setTimeout(async function() {
                     let items = block.find('.owl-carousel .owl-item:not(".cloned") .block-products-carousel__column');
 
                     /*** this is ONLY_FOR_DEMO! / start */
@@ -534,7 +554,7 @@
                     /**/
                     /**/     newItemsArray.push(randomItem);
                     /**/ }
-                    /**/ items = $(newItemsArray);
+                    /**/ items = await response_nhsp();
                     /*** this is ONLY_FOR_DEMO! / end */
                     console.log("Item:"+JSON.stringify(items));
                     block.find('.owl-carousel')
