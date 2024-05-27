@@ -326,7 +326,7 @@ h6 {
     background: #ebebeb
 }
 
-.block-header__groups-list .filter_nhsp {
+.block-header__groups-list  {
     display: -ms-flexbox;
     display: flex;
     list-style: none;
@@ -337,11 +337,11 @@ h6 {
     white-space: nowrap
 }
 
-.block-header__groups-list li+li .filter_nhsp{
+.block-header__groups-list li+li {
     margin-left: 3px
 }
 
-.block-header__group {
+.block-header__group .filter_nhsp{
     background: transparent;
     border: none;
     font-family: inherit;
@@ -429,11 +429,11 @@ h6 {
     margin-left: 16px
 }
 
-.block-header__divider+.block-header__groups-list .filter_nhsp {
+.block-header__divider+.block-header__groups-list  {
     margin-left: 12px
 }
 
-.block-header__groups-list+.block-header__arrows-list .filter_nhsp{
+.block-header__groups-list+.block-header__arrows-list {
     margin-left: 10px
 }
 
@@ -449,7 +449,7 @@ h6 {
         flex-wrap: wrap
     }
 
-    .block-header__groups-list .filter_nhsp{
+    .block-header__groups-list {
         padding: 8px 0;
         margin-top: 8px;
         margin-bottom: -8px;
@@ -459,12 +459,12 @@ h6 {
         -webkit-overflow-scrolling: touch
     }
 
-    .block-header__divider+.block-header__groups-list .filter_nhsp{
+    .block-header__divider+.block-header__groups-list {
         margin-left: auto;
         margin-right: auto
     }
 
-    .block-header__divider+.block-header__groups-list+.block-header__arrows-list .filter_nhsp{
+    .block-header__divider+.block-header__groups-list+.block-header__arrows-list {
         margin-left: 16px
     }
 }
