@@ -536,7 +536,7 @@
                     /**/ }
                     /**/ items = $(newItemsArray);
                     /*** this is ONLY_FOR_DEMO! / end */
-
+                    console.log("Item:"+JSON.stringify(items));
                     block.find('.owl-carousel')
                         .trigger('replace.owl.carousel', [items])
                         .trigger('refresh.owl.carousel')
