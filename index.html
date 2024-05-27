@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <script src="https://alcdn.msauth.net/browser/2.15.0/js/msal-browser.min.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -700,9 +701,7 @@
                         <ul class="block-header__groups-list">
                             <li><button type="button"
                                     class="block-header__group block-header__group--active">All</button></li>
-                            <li><button type="button" class="block-header__group">Power Tools</button></li>
-                            <li><button type="button" class="block-header__group">Hand Tools</button></li>
-                            <li><button type="button" class="block-header__group">Plumbing</button></li>
+                            <div id="filter_nhsp"></div>
                         </ul>
                         <div class="block-header__arrows-list"><button
                                 class="block-header__arrow block-header__arrow--left" type="button"><svg width="7px"
@@ -7902,7 +7901,7 @@
             </div>
         </footer><!-- site__footer / end -->
     </div><!-- site / end -->
-    
+
 </body>
 
 </html>
