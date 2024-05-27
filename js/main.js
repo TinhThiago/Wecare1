@@ -465,7 +465,7 @@
     /*
     // products carousel
     */
-    $(async function() {
+    $(function() {
         $('.block-products-carousel').each(function() {
             const layout = $(this).data('layout');
             const options = {
@@ -543,19 +543,21 @@
                 let timer;
                 timer = setTimeout(async function() {
                     let items = block.find('.owl-carousel .owl-item:not(".cloned") .block-products-carousel__column');
-
-                    /*** this is ONLY_FOR_DEMO! / start */
-                    /**/ const itemsArray = items.get();
-                    /**/ const newItemsArray = [];
-                    /**/
-                    /**/ while (itemsArray.length > 0) {
-                    /**/     const randomIndex = Math.floor(Math.random() * itemsArray.length);
-                    /**/     const randomItem = itemsArray.splice(randomIndex, 1)[0];
-                    /**/
-                    /**/     newItemsArray.push(randomItem);
-                    /**/ }
-                    /**/ items = await response_nhsp();
-                    /*** this is ONLY_FOR_DEMO! / end */
+                    /*
+                     this is ONLY_FOR_DEMO!  start 
+                     const itemsArray = items.get();
+                     const newItemsArray = [];
+                    
+                     while (itemsArray.length > 0) {
+                         const randomIndex = Math.floor(Math.random() * itemsArray.length);
+                         const randomItem = itemsArray.splice(randomIndex, 1)[0];
+                    
+                         newItemsArray.push(randomItem);
+                    }
+                     items = $(newItemsArray);
+                    
+                    */
+                    items = await response_nhspc1();
                     console.log("Item:"+JSON.stringify(items));
                     block.find('.owl-carousel')
                         .trigger('replace.owl.carousel', [items])
