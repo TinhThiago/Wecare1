@@ -1,3 +1,4 @@
+<script src="https://alcdn.msauth.net/browser/2.15.0/js/msal-browser.min.js"></script>
 (function ($) {
     "use strict";
 
