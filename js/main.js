@@ -864,7 +864,8 @@
     $(async function () {
         const data_nhsp = await response_nhspc1();
 
-        let td = "";
+        let td = `<li><button type="button" value="All" onclick="selectAll(this)">
+        <label>All</label></button></li>`;
         for (let i = 0; i < data_nhsp.value.length; i++) {
             td += `<li><button type="button" value="${data_nhsp.value[i].crdfd_manhomsp}" ><label>${data_nhsp.value[i].crdfd_productname}</label></button></li>`;
         }
