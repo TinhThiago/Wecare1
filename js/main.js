@@ -862,7 +862,7 @@
     });
     
     $(async function () {
-        const data_nhsp = await response_nhsp();
+        const data_nhsp = await response_nhspc1();
 
         let td = "";
         for (let i = 0; i < data_nhsp.value.length; i++) {
