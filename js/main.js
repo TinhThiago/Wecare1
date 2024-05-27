@@ -569,6 +569,7 @@
                     });
 
                     block.removeClass('block-products-carousel--loading');
+                    console.log("Block:"+JSON.stringify(block));
                 }, 1000);
                 cancelPreviousTabChange = function() {
                     // timeout ONLY_FOR_DEMO!
