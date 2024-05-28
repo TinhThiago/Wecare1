@@ -867,11 +867,13 @@
         let td = '';
         for (let i = 0; i < data_nhsp.value.length; i++) {
             td += `<div class="block-categories__item category-card category-card--layout--compact">`;
-            td += `<div class="category-card__body"></div>`
-            td += `<div class="category-card__image"><a href="#"><img src="https://wecare-ii.crm5.dynamics.com/Image/download.aspx?Entity=crdfd_productgroup&Attribute=crdfd_hinhanh&Id=${data_nhsp.value[i].crdfd_productgroupid}" alt=""></a></div>`
-            td += `<div class="category-card__content"><div class="category-card__name"><a href="#">${data_nhsp.value[i].crdfd_productname}</a></div>`
+            td += `<div class="category-card__body">`;
+            td += `<div class="category-card__image"><a href="#"><img src="https://wecare-ii.crm5.dynamics.com/Image/download.aspx?Entity=crdfd_productgroup&Attribute=crdfd_hinhanh&Id=${data_nhsp.value[i].crdfd_productgroupid}" alt=""></a></div>`;
+            td += `<div class="category-card__content"><div class="category-card__name"><a href="#">${data_nhsp.value[i].crdfd_productname}</a></div>`;
+            td += `</div></div></div>`;
             //td += `<li><button type="button" value="${data_nhsp.value[i].crdfd_manhomsp}" ><label>${data_nhsp.value[i].crdfd_productname}</label></button></li>`;
         }
+        console.log ("TD:"+ td);
         document.getElementById("filter_nhsp").innerHTML = td;
     });
 })(jQuery);
